@@ -52,6 +52,9 @@ nav ul li i:hover {
     padding: 10px;
     margin-right: 1rem;
 }
+.hamburger.dark-mode{
+  display: block;
+}
 #welcome-section {
     height: 100vh;
     margin-top: 12vh;
@@ -144,7 +147,9 @@ nav ul li i:hover {
     .nav-link {
         display: none;
     }
-    
+    .nav-links.open .nav-link {
+      display: block;
+    }
     .hamburger {
         display: block;
         font-size: x-large;
@@ -152,9 +157,11 @@ nav ul li i:hover {
         margin-top: -10%;
         margin-right: -60%;
     }
+    
     .nav-links {
         margin: 8px 0px;
     }
+    
   }
   
   /* Small Mobile */
@@ -182,3 +189,43 @@ nav ul li i:hover {
         margin: 4px 0px;
     }
   }
+  /* 🌙 DARK MODE */
+body.dark-mode {
+  --primary-color: #ffffff;
+  --secondary-color: #111827;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode #navbar {
+  background-color: #1f2937;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode a:any-link {
+  color: var(--primary-color);
+}
+
+body.dark-mode #welcome-section {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+body.dark-mode .project-grid {
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .large {
+  color: #93c5fd;
+}
+
+body.dark-mode .hamburger i,
+body.dark-mode .dark-toggle i {
+  color: #f9fafb;
+}
+
+.dark-toggle {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5rem;
+}
