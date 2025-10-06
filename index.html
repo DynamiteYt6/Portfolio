@@ -15,9 +15,10 @@
       <nav>
         <ul class="nav-links">
           <li class="nav-link"><a href="#welcome-section">Welcome</a><li>
-          <li class="nav-link"><a href="#projects">Projects</><li>
+          <li class="nav-link"><a href="#projects">Projects</a><li>
           <li class="nav-link"><a href="#contact">Contact</a><li>
-          <li class="hamburger"><i class="fa-solid fa-bars "></i>  <li>
+          <li class="hamburger dark-mode "><i class="fa-solid fa-moon " onclick="darkMode()"></i>  <li>
+          <li class="hamburger"><i class="fa-solid fa-bars " onclick="expand()"></i>  <li>
         </ul>
       </nav>
     </div>
@@ -33,62 +34,62 @@
         <div class="project-grids">
             <div class="project-grid">
                 <a href="">
-                    <img src="images/CafeMenu.png" class="project-image">
+                    <img src="/images/CafeMenu.png" class="project-image">
                     <p class="center project-text">Café Menu</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/SurveyForm.png" class="project-image">
+                    <img src="/images/SurveyForm.png" class="project-image">
                     <p class="center project-text">Survey Form</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/DocumentationPage.png" class="project-image">
+                    <img src="/images/DocumentationPage.png" class="project-image">
                     <p class="center project-text">RESTful API Documentation</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/TributePage.png" class="project-image">
+                    <img src="/images/TributePage.png" class="project-image">
                     <p class="center project-text">Tribute Page</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/ProductLandingPage.png" class="project-image">
+                    <img src="/images/ProductLandingPage.png" class="project-image">
                     <p class="center project-text">Product Landing Page</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/CitySkyline.png" class="project-image">
+                    <img src="/images/CitySkyline.png" class="project-image">
                     <p class="center project-text">City Skyline</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/CSSPenguinAnimation.png" class="project-image">
+                    <img src="/images/CSSPenguinAnimation.png" class="project-image">
                     <p class="center project-text">CSS Penguin Animation</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/CSSCatPainting.png" class="project-image">
+                    <img src="/images/CSSCatPainting.png" class="project-image">
                     <p class="center project-text">CSS Cat Painting</p>
                   </a>
             </div>
             <div class="project-grid">
                 <a href="">
-                    <img src="images/NutritionLabel.png" class="project-image">
+                    <img src="/images/NutritionLabel.png" class="project-image">
                     <p class="center project-text">Nutrition Label</p>
                   </a>
             </div>
         </div>
       </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
       <h2 class="center large">Contact me via:</h2>
       <div class="socials center">
         <div class="social-link">
@@ -124,5 +125,26 @@
       </div>
     </div>
   </body>
-<html>
+  <script>
+    function expand() {
+      var menu = document.querySelector(".hamburger i")
+      const navLinks = document.querySelector(".nav-links")
+      navLinks.classList.toggle("open")
+      menu.classList.toggle("fa-bars")
+      menu.classList.toggle("fa-xmark")
+    }
+    function darkMode() {
+      const body = document.body;
+      const icon = document.querySelector("dark-mode i");
+      body.classList.toggle("dark-mode")
+      if (body.classList.contains("dark-mode")){
+        icon.classList.remove("fa-moon")
+        icon.classList.add("fa-sun")
+      } else {
+        icon.classList.add("fa-moon")
+        icon.classList.remove("fa-sun")
+      }
 
+    }
+  </script>
+<html>
